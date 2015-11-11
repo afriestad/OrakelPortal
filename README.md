@@ -1,2 +1,2 @@
 # OrakelPortal
-Lenkeportal for Orakeltjenesten - NTNU IT (portal.orakel.ntnu.no)
+http://portal.orakel.ntnu.no - Lenkeportal for Orakeltjenesten (NTNU IT)

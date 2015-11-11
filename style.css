@@ -1,0 +1,204 @@
+/* Resets & basic page setup */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Lato', sans-serif;
+}
+
+/* Header (logo & site name) */
+header {
+	background: #333333;
+	color: white;
+}
+
+.wrap {
+	max-width: 1600px;
+	margin: 0 auto;
+	padding: 1em;
+	padding-left: 9%;
+}
+
+header .wrap {
+	display: -webkit-flex;
+	display: flex;
+	align-items: center;
+}
+
+header .logo {
+	width: 50px;
+	margin-right: 0.5em;
+	margin-bottom: 0em;
+}
+
+.thin {
+	font-weight: 300;
+}
+
+header p {
+	font-weight: 300;
+}
+
+body header .wrap {
+	padding-top: .7em;
+	padding-bottom: .7em;
+}
+
+/* Navigation, may be used in the future */
+nav {
+	background: #7a7a7a;
+	color: white;
+	font-weight: 300;
+}
+
+nav .wrap {
+	padding: 0.5em 0;
+	padding-left: 7%;
+}
+
+nav li {
+	display: inline;
+	padding-left: 1em;
+	white-space: nowrap;
+}
+
+nav a {
+	color: white;
+	text-decoration: none;
+}
+
+/* Content */
+.content {
+	display: flex;
+	margin-top: 1em;
+	display: -webkit-flex;
+	flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+div.wrap.content {
+	margin-top: 0;
+}
+
+.content article {
+	padding: 1em;
+	width: 33.3333%;
+	padding-top: 1%;
+	white-space: nowrap; /* No linebreaking in the lists */
+}
+
+.content article ul {
+	margin-top: 1em;
+	font-size: 1.1em;
+	line-height: 1.5;
+	color: #666;
+}
+
+.content article ul li {
+	font-size: 88%;
+	margin: -0.18em 0 0 0;
+	text-indent: -25px;
+}
+
+/* Extending the link clickable area to the left in order to include the bullet points */
+.content article ul li a {
+	display: block;
+	padding-left: 25px;
+}
+
+.content article img {
+	width: 5em;
+	height: 5em;
+	text-align: center;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+.content a:visited {
+	color: black;
+}
+
+/* Hover effects */
+nav a:hover {
+	color: silver;
+}
+
+.content article .kategori:hover {
+	opacity: 0.4;
+	filter: alpha(opacity=40);
+	color: grey;
+}
+
+
+.content li a:hover {
+	color: black;
+	background: #eee;
+}
+
+/* Responsive design (break points) */
+@media (max-width: 900px) {
+	.content article {
+		width: 50%;
+	}
+
+	footer {
+		position:relative;
+	}
+
+}
+
+@media (max-width: 500px) {
+	.wrap {
+		padding-left: 6%; /* In order to achieve center allignment on mobile*/
+	}
+
+	header .logo {
+		width: 40px;
+	}
+
+	header h1 {
+		font-size: 1.5em;
+	}
+
+	nav li {
+		display: block;
+		text-align: center;
+		padding: 0.5em;
+	}
+
+	.content article {
+		width: 100%;
+		padding: 0.3em;
+	}
+
+	header .logo {
+		width: 60px;
+		margin-right: 1em;
+		margin-left: 18%;
+		margin-bottom: auto;
+		text-align: center;
+	}
+
+	.content {
+		width:200px;
+		margin:0 auto;
+		text-align:left;
+	}
+
+	.content img {
+		margin-top: 1.5em; /* A bit more spacing between the categories on the mobile version */
+	}
+
+	.content article ul {
+		margin-top: 0.3em;
+		margin-top: 0.3em;
+	}
+}
